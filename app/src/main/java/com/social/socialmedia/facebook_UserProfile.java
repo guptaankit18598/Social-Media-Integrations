@@ -18,7 +18,7 @@ import com.squareup.picasso.Picasso;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
-public class UserProfile  extends AppCompatActivity {
+public class facebook_UserProfile extends AppCompatActivity {
 
     CircleImageView circleImageView;
     Button logout;
@@ -55,7 +55,7 @@ public class UserProfile  extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                AlertDialog.Builder builder_exitbutton = new AlertDialog.Builder(UserProfile.this);
+                AlertDialog.Builder builder_exitbutton = new AlertDialog.Builder(facebook_UserProfile.this);
                 builder_exitbutton.setTitle("Really Logout?")
                         .setMessage("Are you sure?")
                         .setPositiveButton("yes", new DialogInterface.OnClickListener() {
@@ -71,8 +71,8 @@ public class UserProfile  extends AppCompatActivity {
                                 editor1.clear();
                                 editor1.commit();
 
-                                Toast.makeText(UserProfile.this, "Facebook Logged out successfully!", Toast.LENGTH_SHORT).show();
-                                Intent intent = new Intent(UserProfile.this, MainActivity.class);
+                                Toast.makeText(facebook_UserProfile.this, "Facebook Logged out successfully!", Toast.LENGTH_SHORT).show();
+                                Intent intent = new Intent(facebook_UserProfile.this, MainActivity.class);
                                 startActivity(intent);
                                 finish();
                             }

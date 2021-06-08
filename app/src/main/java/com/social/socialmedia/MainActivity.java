@@ -65,7 +65,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
         SharedPreferences fb_settings = getSharedPreferences(FB_LOGIN, 0);
         SharedPreferences email_settings = getSharedPreferences(GMAIL_LOGIN, 0);
         if (fb_settings.getString("fb_logged", "").toString().equals("fb_logged")) {
-            startActivity(new Intent(MainActivity.this, UserProfile.class));
+            startActivity(new Intent(MainActivity.this, facebook_UserProfile.class));
             this.finish();
         }else if (email_settings.getString("gmail_logged", "").toString().equals("gmail_logged")) {
             startActivity(new Intent(MainActivity.this, gmail_userprofile.class));
@@ -143,7 +143,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
                                     progressDialog.dismiss();
 
                                     Toast.makeText(MainActivity.this, "Login successfully.", Toast.LENGTH_SHORT).show();
-                                    startActivity(new Intent(MainActivity.this, UserProfile.class));
+                                    startActivity(new Intent(MainActivity.this, facebook_UserProfile.class));
                                     finish();
 
 

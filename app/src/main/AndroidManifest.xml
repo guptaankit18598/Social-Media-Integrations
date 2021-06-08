@@ -26,7 +26,7 @@
         </activity>
 
         <activity
-            android:name=".UserProfile"
+            android:name=".facebook_UserProfile"
             android:screenOrientation="portrait"
             android:label="Profile"
             android:theme="@style/AppTheme" />
